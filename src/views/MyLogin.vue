@@ -33,13 +33,28 @@
 </template>
 
 <script>
-
-export default ({
+export default {
     name: 'MyLogin',
     methods: {
         navegarPara() {
+            //console.log(this.$router) //objeto de roteamento
+
+            //coletar os dados de e-mail e senha
+            //realizar um requisição http de autenticação
+            //receber o token de autorização
+
             this.$router.push('/home')
+            //this.$router.push({ path: '/home' })
+
+            //this.$router.replace('/home')
+            //this.$router.replace({ path: '/home' })
+            
+            //this.$router.forward() //avançar no histórico de rotas do navegador
+            //this.$router.back() //retornar no histórico de rotas do navegador
+
+            //this.$router.go(2) //avançar ou retornar na histórico de rotas do navegador
+            //this.$router.go(-2) //avançar ou retornar na histórico de rotas do navegador
         }
     }
-})
+}
 </script>

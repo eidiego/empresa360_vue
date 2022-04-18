@@ -1,4 +1,4 @@
-   <template>
+<template>
     <div>
         <nav class="navbar navbar-light bg-light menu-superior">
             <div class="container">
