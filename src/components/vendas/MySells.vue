@@ -1,3 +1,6 @@
 <template>
-    <h5>Vendas</h5>
+    <h3>Vendas</h3>
+    <hr>
+    <router-view />
+    
 </template>

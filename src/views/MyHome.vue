@@ -6,7 +6,7 @@
                 <div class="navbar-nav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sair</a>
+                            <router-link class="nav-link" to="/">Sair</router-link>
                         </li>
                     </ul>
                 </div>
@@ -20,6 +20,12 @@
                 </router-link>
                 <router-link class="list-group-item list-group-item-action" to="/home/vendas">
                     <i class="bi bi-cart"></i> Vendas
+                </router-link>
+                <router-link class="list-group-item list-group-item-action" to="/home/vendas/leads">
+                    <i class="bi bi-caret-right"></i> Leads
+                </router-link>
+                <router-link class="list-group-item list-group-item-action" to="/home/vendas/contratos">
+                    <i class="bi bi-caret-right"></i> Contratos
                 </router-link>
                 <router-link class="list-group-item list-group-item-action" to="/home/servicos">
                     <i class="bi bi-card-checklist"></i> Serviços
@@ -56,6 +62,10 @@
 .list-group-item {
     border-top: none;
     border-right: none;
+}
+
+.router-link-exact-active {
+    background-color: lightblue;
 }
 
 </style>
