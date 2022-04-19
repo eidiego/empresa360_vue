@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 //createWebHashHistory
 import Vendas from '@/components/vendas/MySells.vue'
 import Leads from '@/components/vendas/MyLeads.vue'
+import Lead from '@/components/vendas/MyLead.vue'
 import Dashboard from '@/components/dashboard/MyDashboard.vue'
 import Contratos from '@/components/vendas/MyContracts.vue'
 import Servicos from '@/components/servicos/MyServices.vue'
@@ -20,6 +21,7 @@ const routes = [
         children: [
             { path: 'vendas', component: Vendas, children: [
                 {path: 'leads', component: Leads},
+                {path: 'leads/:id', component: Lead},
                 {path: 'contratos', component: Contratos},
             ]}, //localhost:8080/home/vendas
             { path: 'servicos', component: Servicos }, //localhost:8080/home/servicos
