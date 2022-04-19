@@ -15,6 +15,11 @@ export default {
     mixins: [ApiMixin],
     created() {
         this.getDadosApi(`http://localhost:3000/servicos/${this.$route.params.id}`)
+    },
+    watch: {
+        $route(to) {
+           this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`)
+        }
     }
 }
 </script>
