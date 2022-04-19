@@ -27,7 +27,7 @@
                 <router-link class="list-group-item list-group-item-action" to="/home/vendas/contratos">
                     <i class="bi bi-caret-right"></i> Contratos
                 </router-link>
-                <router-link class="list-group-item list-group-item-action" to="/home/servicos">
+                <router-link class="list-group-item list-group-item-action" :to="{ name: 'servicos'}">
                     <i class="bi bi-card-checklist"></i> Serviços
                 </router-link>
             </div>

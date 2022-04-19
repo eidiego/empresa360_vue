@@ -21,13 +21,13 @@ const routes = [{
                 path: 'vendas',
                 component: Vendas,
                 children: [
-                    { path: 'leads', component: Leads },
-                    { path: 'leads/:id', component: Lead },
-                    { path: 'contratos', component: Contratos },
+                    { path: 'leads', component: Leads, name: 'leads' },
+                    { path: 'leads/:id', component: Lead, name: 'lead' },
+                    { path: 'contratos', component: Contratos, name: 'contratos' },
                     { path: '', component: VendasPadrao },
                 ]
             }, //localhost:8080/home/vendas
-            { path: 'servicos', component: Servicos }, //localhost:8080/home/servicos
+            { path: 'servicos', component: Servicos, name: 'servicos' }, //localhost:8080/home/servicos
             { path: 'dashboard', component: Dashboard }
         ]
     },
