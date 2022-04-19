@@ -2,17 +2,16 @@
     <div>
         <h3> Serviços </h3>
         <div class="row">
-            <div class="col" v-for="d in dados" :key="d.id">
+            <div class="col mb-4" v-for="d in dados" :key="d.id">
                 <div class="card" style="width: 11rem">
                     <img class="card-img-top" :src="`/img/${d.icone}`">
                     <div class="card-body text-center" >
-                        <p class="card-text">
-                            {{ d.servico }}
-                        </p>
+                        <p class="card-text">{{ d.servico }}</p>
                     </div>
                 </div>
             </div>
         </div>
+        <routerView class="mt-3" />
     </div>
 </template>
 

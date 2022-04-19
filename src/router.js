@@ -6,6 +6,7 @@ import Dashboard from '@/components/dashboard/MyDashboard.vue'
 import Contratos from '@/components/vendas/MyContracts.vue'
 import VendasPadrao from '@/components/vendas/VendasPadrao.vue'
 import Servicos from '@/components/servicos/MyServices.vue'
+import Servico from '@/components/servicos/MyService.vue'
 import Home from '@/views/MyHome.vue'
 import Login from '@/views/MyLogin.vue'
 import Site from '@/views/MySite.vue'
@@ -27,7 +28,15 @@ const routes = [{
                     { path: '', component: VendasPadrao },
                 ]
             }, //localhost:8080/home/vendas
-            { path: 'servicos', component: Servicos, name: 'servicos' }, //localhost:8080/home/servicos
+            {
+                path: 'servicos',
+                component: Servicos,
+                name: 'servicos',
+                children: [
+                    { path: ':id', component: Servico, name: 'service' }
+
+                ]
+            }, //localhost:8080/home/servicos
             { path: 'dashboard', component: Dashboard }
         ]
     },
