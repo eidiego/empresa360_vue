@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-//createWebHashHistory
 import Vendas from '@/components/vendas/MySells.vue'
 import Leads from '@/components/vendas/MyLeads.vue'
 import Lead from '@/components/vendas/MyLead.vue'
