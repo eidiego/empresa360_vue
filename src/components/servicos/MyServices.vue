@@ -7,7 +7,7 @@
                     <img class="card-img-top" :src="`/img/${d.icone}`">
                     <div class="card-body text-center" >
                         <p class="card-text">
-                            {{d.servico}}
+                            {{ d.servico }}
                         </p>
                     </div>
                 </div>
