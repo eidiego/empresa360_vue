@@ -36,30 +36,35 @@ const routes = [{
                 path: 'servicos',
                 component: Servicos,
                 name: 'servicos',
-                children: [
-                    { path: ':id', components: { 
-                        default: Servico,
-                        options: Options,
-                        indicators: Indicators
-                     }, name: 'service' }
+                children: [{
+                        path: ':id',
+                        components: {
+                            default: Servico,
+                            options: Options,
+                            indicators: Indicators
+                        },
+                        name: 'service'
+                    }
 
                 ]
             }, //localhost:8080/home/servicos
-            { path: 'dashboard', component: {
-                default: Dashboard,
-                footer: DashboardFooter
-            }  
-        },
+            {
+                path: 'dashboard',
+                components: {
+                    default: Dashboard,
+                    footer: DashboardFooter
+                }
+            },
             {
                 path: '/login', //localhost:8080/login
                 component: Login
             },
             { path: '/redirect-1', redirect: '/home/servicos' },
-            
+
         ]
     },
     { path: '/:catchAll(.*)*', component: PageNotFound }
- 
+
 ]
 
 const router = createRouter({
