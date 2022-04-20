@@ -3,6 +3,7 @@ import Vendas from '@/components/vendas/MySells.vue'
 import Leads from '@/components/vendas/MyLeads.vue'
 import Lead from '@/components/vendas/MyLead.vue'
 import Dashboard from '@/components/dashboard/MyDashboard.vue'
+import DashboardFooter from '@/components/dashboard/DashboardFooter.vue'
 import Contratos from '@/components/vendas/MyContracts.vue'
 import VendasPadrao from '@/components/vendas/VendasPadrao.vue'
 import Servicos from '@/components/servicos/MyServices.vue'
@@ -38,12 +39,16 @@ const routes = [{
                     { path: ':id', components: { 
                         default: Servico,
                         options: Options,
-                        indicators: Indicators 
+                        indicators: Indicators
                      }, name: 'service' }
 
                 ]
             }, //localhost:8080/home/servicos
-            { path: 'dashboard', component: Dashboard }
+            { path: 'dashboard', component: {
+                default: Dashboard,
+                footer: DashboardFooter
+            }  
+        }
         ]
     },
     {

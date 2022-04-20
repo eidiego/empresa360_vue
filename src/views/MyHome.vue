@@ -45,6 +45,9 @@
 
             </div>
         </div>
+            <div class="rodape">
+               <routerView name="footer" />
+            </div>
     </div>
 </template>
 
@@ -66,6 +69,14 @@
 
 .router-link-exact-active {
     background-color: lightblue;
+}
+
+.rodape {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #ddd;
 }
 
 </style>
