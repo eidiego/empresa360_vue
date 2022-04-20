@@ -7,6 +7,8 @@ import Contratos from '@/components/vendas/MyContracts.vue'
 import VendasPadrao from '@/components/vendas/VendasPadrao.vue'
 import Servicos from '@/components/servicos/MyServices.vue'
 import Servico from '@/components/servicos/MyService.vue'
+import Options from '@/components/servicos/MyOptions.vue'
+import Indicators from '@/components/servicos/MyIndicators.vue'
 import Home from '@/views/MyHome.vue'
 import Login from '@/views/MyLogin.vue'
 import Site from '@/views/MySite.vue'
@@ -33,7 +35,11 @@ const routes = [{
                 component: Servicos,
                 name: 'servicos',
                 children: [
-                    { path: ':id', component: Servico, name: 'service' }
+                    { path: ':id', components: { 
+                        default: Servico,
+                        options: Options,
+                        indicators: Indicators 
+                     }, name: 'service' }
 
                 ]
             }, //localhost:8080/home/servicos
