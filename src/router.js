@@ -13,6 +13,7 @@ import Indicators from '@/components/servicos/MyIndicators.vue'
 import Home from '@/views/MyHome.vue'
 import Login from '@/views/MyLogin.vue'
 import Site from '@/views/MySite.vue'
+import PageNotFound from '@/views/PageNotFound.vue'
 
 const routes = [{
         path: '/', //localhost:8080/
@@ -48,13 +49,17 @@ const routes = [{
                 default: Dashboard,
                 footer: DashboardFooter
             }  
-        }
+        },
+            {
+                path: '/login', //localhost:8080/login
+                component: Login
+            },
+            { path: '/redirect-1', redirect: '/home/servicos' },
+            
         ]
     },
-    {
-        path: '/login', //localhost:8080/login
-        component: Login
-    }
+    { path: '/:catchAll(.*)*', component: PageNotFound }
+ 
 ]
 
 const router = createRouter({
