@@ -27,7 +27,13 @@ const routes = [{
                 component: Vendas,
                 children: [
                     { path: 'leads', component: Leads, name: 'leads' },
-                    { path: 'leads/:id', component: Lead, name: 'lead' },
+                    { 
+                        path: 'leads/:id/:otherParameter', 
+                        props: true,
+                        component: Lead, 
+                        name: 'lead'
+
+                    },
                     { path: 'contratos', component: Contratos, name: 'contratos' },
                     { path: '', component: VendasPadrao },
                 ]
@@ -38,6 +44,12 @@ const routes = [{
                 name: 'servicos',
                 children: [{
                         path: ':id',
+                        props: {
+                            default: true,
+                            options: true,
+                            indicators: false
+
+                        },
                         components: {
                             default: Servico,
                             options: Options,

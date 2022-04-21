@@ -17,7 +17,7 @@
                     <td> {{ d.telefone }} </td>
                     <td>
                        <!-- <router-link :to="`/home/vendas/leads/${d.id}`" class="btn btn-sm btn-primary">  -->
-                       <router-link :to="{ name: 'lead', params: { id: d.id }}" class="btn btn-sm btn-primary"> 
+                       <router-link :to="{ name: 'lead', params: { id: d.id, otherParameter: 'teste' }}" class="btn btn-sm btn-primary"> 
                             <i class="bi bi-pencil-square" style="cursor: pointer;"></i>
                        </router-link>
                     </td>
