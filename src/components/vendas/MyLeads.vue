@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import ApiMixin from "@/mixins/ApiMixin"
+import ApiMixin from "@/mixins/ApiMixin.ts"
 export default {
     name: 'MyLeads',
     mixins: [ApiMixin],
